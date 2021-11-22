@@ -144,12 +144,19 @@ class PieceComparator  implements Comparator<PieceModel>{
 	 * Permet de comparer en 1er sur les colonnes puis sur les lignes
 	 */
 	@Override
-	public int compare(PieceModel o1, PieceModel o2) {
-
+	public int compare (PieceModel o1, PieceModel o2) {
 		int comp = 0;
-		
-		// TODO
-		
+		if (o1.getColonne() > o2.getColonne()) {
+			comp = (int) Math.signum(o1.getColonne());
+		} else if(o1.getColonne() < o2.getColonne()) {
+			comp = (int) Math.signum(o2.getColonne());
+		}
+
+		if(comp == 0) {
+			comp = o1.getLigne()-o2.getLigne();
+		} else {
+			comp = o1.getColonne() - o2.getColonne();
+		}
 		return comp;
 	}
 }

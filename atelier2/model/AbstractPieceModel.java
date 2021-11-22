@@ -70,4 +70,25 @@ public class AbstractPieceModel implements PieceModel {
     public String toString() {
         return " ["+this.pieceColor.toString().charAt(0) + this.coord + "]";
     }
+
+
+    @Override
+    public int compareTo(PieceModel o) {
+        int comp = 0;
+        if (this.getColonne() > o.getColonne())
+        {
+            comp = 1;
+        }
+        else
+            if(this.getColonne() < o.getColonne())
+        {
+            comp = -1;
+        }
+
+        if(comp == 0)
+        {
+            comp = (int) Math.signum(this.getLigne() - o.getLigne());
+        }
+        return comp;
+    }
 }
