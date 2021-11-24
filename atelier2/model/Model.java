@@ -83,16 +83,22 @@ public class Model implements BoardGame<Coord> {
 					this.remove(toCapturePieceCoord);
 
 					// promotion éventuelle de la pièce après déplacement 
-					if (isPiecePromotable(targetSquareCoord)) {
+					if (isPiecePromotable(targetSquareCoord))
+					{
 						this.isPiecePromotable(targetSquareCoord);
 						toPromotePieceCoord = targetSquareCoord;
 						toPromotePieceColor = this.currentGamerColor;
 					}
 
 					// S'il n'y a pas eu de prise
-					// ou si une rafle n'est pas possible alors changement de joueur 
-					if (true) {    // TODO : Test à changer atelier 4
+					// ou si une rafle n'est pas possible alors changement de joueur
+					if (true) {
+						// TODO : Test à changer atelier 4
 						this.switchGamer();
+					}
+					else
+					{
+
 					}
 				}
 			}

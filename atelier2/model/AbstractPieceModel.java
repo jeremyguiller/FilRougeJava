@@ -71,4 +71,5 @@ public class AbstractPieceModel implements PieceModel {
     public String toString() {
         return " ["+this.pieceColor.toString().charAt(0) + this.coord + "]";
     }
+
 }
