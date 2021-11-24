@@ -63,6 +63,7 @@ public class AbstractPieceModel implements PieceModel {
         }
         return coordsOnItinery;
     }
+
     /* (non-Javadoc)
      * @see java.lang.Object#toString()
      */
